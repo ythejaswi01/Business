@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f7f4">
+  <meta name="description" content="Your Stackly Advisory demo welcome page.">
+  <title>Welcome — Stackly Advisory</title>
+  <link rel="stylesheet" href="auth.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js" defer></script>
+</head>
+<body class="auth-page dashboard-page">
+  <main class="dashboard-shell">
+    <header class="dashboard-header">
+      <a class="auth-wordmark auth-wordmark-dark" href="index.html" aria-label="Stackly Advisory home">stackly<span>.</span></a>
+      <button class="logout-button" id="logout-button" type="button">Log out <span aria-hidden="true">↗</span></button>
+    </header>
+    <section class="dashboard-card" aria-labelledby="dashboard-title">
+      <p class="auth-eyebrow">Your Stackly account</p>
+      <h1 id="dashboard-title">Welcome to Stackly<span class="brand-period">.</span></h1>
+      <p class="dashboard-welcome">Welcome, <strong id="user-name">there</strong>.</p>
+      <p class="dashboard-email" id="user-email"></p>
+      <div class="demo-notice" role="note">
+        <strong>Demo account</strong>
+        <span>This is a frontend-only demonstration. No account credentials or passwords are stored. Connect a secure authentication backend before production use.</span>
+      </div>
+      <a class="dashboard-home-link" href="index.html">Explore Stackly Advisory <span aria-hidden="true">→</span></a>
+    </section>
+    <p class="auth-copyright">© <span data-current-year></span> Stackly Advisory · Independent by design.</p>
+  </main>
+</body>
+</html>

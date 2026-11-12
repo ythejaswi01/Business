@@ -1,0 +1,100 @@
+.dashboard-page {
+  min-height: 100vh;
+  background: #f0f0ec;
+}
+
+.dashboard-shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0 clamp(22px, 7vw, 100px);
+}
+
+.dashboard-header {
+  display: flex;
+  min-height: 86px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcded7;
+}
+
+.logout-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0 10px 10px;
+  border: 0;
+  background: transparent;
+  color: #232622;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+}
+
+.logout-button span { transition: transform .2s ease; }
+.logout-button:hover span { transform: translate(2px, -2px); }
+
+.dashboard-card {
+  width: min(100%, 670px);
+  margin: auto;
+  padding: clamp(30px, 7vw, 70px);
+  background: #f7f7f4;
+  box-shadow: 0 20px 70px rgba(35,38,34,.06);
+  animation: auth-form-in .65s both cubic-bezier(.2,.65,.25,1);
+}
+
+.dashboard-card h1 {
+  margin: 0 0 19px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 7vw, 68px);
+  font-weight: 400;
+  letter-spacing: -2px;
+  line-height: 1.08;
+}
+
+.dashboard-card .brand-period { color: #858b7e; }
+.dashboard-welcome { margin: 0 0 5px; color: #555b53; font-size: 16px; }
+.dashboard-welcome strong { color: #232622; font-weight: 550; }
+.dashboard-email { margin: 0 0 26px; color: #737770; font-size: 11px; }
+.dashboard-card .demo-notice { margin-bottom: 25px; }
+
+.dashboard-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #969a91;
+  font-size: 11px;
+}
+
+.dashboard-home-link span { transition: transform .2s ease; }
+.dashboard-home-link:hover span { transform: translateX(4px); }
+.dashboard-shell > .auth-copyright { position: static; padding: 18px 0; text-align: left; }
+
+@media (max-width: 460px) {
+  .dashboard-shell { padding-inline: 20px; }
+  .dashboard-card { padding: 32px 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-card { animation: none; }
+}
+
+.dashboard-page {
+  background:
+    radial-gradient(ellipse at 90% 8%, rgba(22,166,160,.14), transparent 28rem),
+    linear-gradient(140deg, #eaf1fa, #f5f6f8);
+}
+.dashboard-header { border-bottom-color: rgba(23,43,77,.14); }
+.logout-button { color: #172b4d; }
+.logout-button:hover { color: #108d89; }
+.dashboard-card {
+  border: 1px solid rgba(23,43,77,.07);
+  box-shadow: 0 24px 60px rgba(16,29,53,.11);
+}
+.dashboard-card h1 { color: #101d35; }
+.dashboard-card .brand-period { color: #16a6a0; }
+.dashboard-welcome strong { color: #108d89; }
+.dashboard-home-link { border-color: #16a6a0; color: #108d89; }
+.dashboard-home-link:hover { color: #172b4d; }
+.dashboard-shell > .auth-copyright { color: #65738a; }
